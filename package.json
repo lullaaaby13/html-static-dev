@@ -1,0 +1,14 @@
+{
+  "name": "html-static-dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./src/index.js --watch src"
+  },
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^4.17.1",
+    "livereload": "^0.8.2"
+  }
+}
