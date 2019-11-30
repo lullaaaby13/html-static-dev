@@ -1,9 +1,184 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Webpack Development</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style media="screen">
+    html {
+      overflow: hidden;
+    }
+    body {
+      overflow: auto;
+    }
+    body::before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('./img/bg.jpg');
+      background-size: cover;
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: blur(2px);
+      transform: scale(1.02);
+      z-index: -1;
+      content: "";
+    }
+    .form-control {
+      border-radius: 0;
+      height: 60px;
+      border: none;
+      background-color: #e9ecef;
+      border-bottom: 1px solid;
+    }
+    .form-control > input {
+      color: red;
+    }
+    .jumbotron {
+      height: 900vh;
+      max-height: 90vh;
+    }
+    </style>
   </head>
   <body>
-    <h2>반영되냐ss</h2>
+    <div class="container-fluid px-5">
+      <div class="jumbotron my-4 mx-5 px-5">
+
+        <div class="input-group mb-4" style="">
+          <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
+        </div>
+
+        <div class="float-right">
+          <!-- <button type="button" class="btn btn-outline-success px-4">로그인</button> -->
+          <div class="d-flex align-items-center">
+            <img src="http://placehold.it/40x40" class="rounded-circle mr-3" alt="Cinque Terre">
+            <p class="pt-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="text-success font-weight-bold h5">BlueCitron</span>
+              님 안녕하세요
+            </p>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">관심도서</a>
+              <a class="dropdown-item" href="#">대출중인도서</a>
+              <a class="dropdown-item" href="#">회원정보</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">카테고리관리</a>
+              <a class="dropdown-item" href="#">도서등록</a>
+              <a class="dropdown-item" href="#">도서대여현황</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">로그아웃</a>
+            </div>
+          </div>
+        </div>
+        <ul class="nav">
+          <li class="nav-item mr-4">
+            <h4>CITRON'S LIBRARY</h4>
+          </li>
+          <li class="nav-item">
+            <li class="nav-item dropdown">
+               <a class="nav-link text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">자료검색</a>
+               <div class="dropdown-menu">
+                 <a class="dropdown-item" href="#">주제별 검색</a>
+                 <a class="dropdown-item" href="#">Another action</a>
+                 <a class="dropdown-item" href="#">Something else here</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+             </li>
+          </li>
+        </ul>
+
+        <hr>
+
+
+
+         <div class="d-flex my-5">
+           <div class="card w-75 mr-3">
+             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav-tabs">
+                  <a class="nav-item nav-link active p-3" href="#">추천도서<span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link p-3" href="#">신착도서</a>
+                  <a class="nav-item nav-link p-3" href="#">대출 베스트</a>
+                </div>
+              </div>
+            </nav>
+            <div class="card-body d-flex">
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+              <div class="recommend-book mx-3">
+                <img src="http://placehold.it/150x200" alt="">
+                <p class="mt-2">세월의돌</p>
+              </div>
+            </div>
+           </div>
+           <div class="card w-25 ml-3">
+             <div class="card-body">
+               <h5 class="card-title">공지사항</h5>
+               <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between" style="text-overflow: ellipsis;">
+                  <a class="text-muted h6" href="#" style="max-width:220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                  <span class="text-muted h6">2019-11-29</span>
+                </li>
+              </ul>
+
+             </div>
+           </div>
+         </div>
+
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

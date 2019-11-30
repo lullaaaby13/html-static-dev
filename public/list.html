@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style media="screen">
+    html {
+      overflow: hidden;
+    }
+    body {
+      overflow: auto;
+    }
+    body::before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('./img/bg.jpg');
+      background-size: cover;
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: blur(2px);
+      transform: scale(1.02);
+      z-index: -1;
+      content: "";
+    }
+    .form-control {
+      border-radius: 0;
+      height: 60px;
+      border: none;
+      background-color: #e9ecef;
+      border-bottom: 1px solid;
+    }
+    .form-control > input {
+      color: red;
+    }
+    .jumbotron {
+      height: 900vh;
+      max-height: 90vh;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid px-5 overflow-auto">
+      <div class="jumbotron my-4 mx-5 px-5 overflow-auto">
+
+        <div class="input-group mb-4">
+          <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
+        </div>
+
+        <div class="float-right">
+          <!-- <button type="button" class="btn btn-outline-success px-4">로그인</button> -->
+          <div class="d-flex align-items-center">
+            <img src="http://placehold.it/40x40" class="rounded-circle mr-3" alt="Cinque Terre">
+            <p class="pt-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="text-success font-weight-bold h5">BlueCitron</span>
+              님 안녕하세요
+            </p>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">관심도서</a>
+              <a class="dropdown-item" href="#">대출중인도서</a>
+              <a class="dropdown-item" href="#">대출이력</a>
+              <a class="dropdown-item" href="#">회원정보</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">카테고리관리</a>
+              <a class="dropdown-item" href="#">도서등록</a>
+              <a class="dropdown-item" href="#">도서대여현황</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">로그아웃</a>
+            </div>
+          </div>
+        </div>
+        <ul class="nav">
+          <li class="nav-item mr-4">
+            <h4>CITRON'S LIBRARY</h4>
+          </li>
+          <li class="nav-item">
+            <li class="nav-item dropdown">
+               <a class="nav-link text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">자료검색</a>
+               <div class="dropdown-menu">
+                 <a class="dropdown-item" href="#">주제별 검색</a>
+                 <a class="dropdown-item" href="#">Another action</a>
+                 <a class="dropdown-item" href="#">Something else here</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" href="#">Separated link</a>
+               </div>
+             </li>
+          </li>
+        </ul>
+
+        <hr>
+
+         <div class="clearfix my-5">
+           <div class="card w-25 mr-3 float-left">
+             <ul class="list-group">
+                <li class="list-group-item active">전체</li>
+                <li class="list-group-item">카테고리1</li>
+                <li class="list-group-item">카테고리2</li>
+                <li class="list-group-item">카테고리3</li>
+                <li class="list-group-item">카테고리4</li>
+                <li class="list-group-item">카테고리5</li>
+              </ul>
+           </div>
+           <div class="card float-right" style="width: 73%">
+             <div class="card-body">
+               <div class="d-flex justify-content-between">
+                 <p>
+                   검색어 <span class="font-weight-bold">'전체:세월의돌'</span>
+                   에 대한 자료검색 결과이며, 총
+                   <span class="font-weight-bold">7</span>
+                   건이 검색되었습니다.
+                 </p>
+                 <div class="">
+                   <div class="btn-group mr-1">
+                     <button class="btn btn-sm btn-outline-secondary px-3" type="button" name="button" id="orderType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">정확도순</button>
+                     <div class="dropdown-menu" aria-labelledby="orderType">
+                      <a class="dropdown-item" href="#">서명</a>
+                      <a class="dropdown-item" href="#">저자</a>
+                      <a class="dropdown-item" href="#">발행자</a>
+                      <a class="dropdown-item" href="#">발행년도</a>
+                    </div>
+                   </div>
+                   <div class="btn-group mr-1">
+                     <button class="btn btn-sm btn-outline-secondary px-3" type="button" name="button" id="orderType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">오름차순</button>
+                     <div class="dropdown-menu" aria-labelledby="orderType">
+                      <a class="dropdown-item" href="#">내림차순</a>
+                      <a class="dropdown-item" href="#">오름차순</a>
+                    </div>
+                   </div>
+                   <div class="btn-group mr-1">
+                     <button class="btn btn-sm btn-outline-secondary px-4" type="button" name="button" id="orderType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">10</button>
+                     <div class="dropdown-menu" aria-labelledby="orderType">
+                      <a class="dropdown-item" href="#">20</a>
+                      <a class="dropdown-item" href="#">30</a>
+                      <a class="dropdown-item" href="#">50</a>
+                    </div>
+                   </div>
+                 </div>
+               </div>
+
+
+               <hr>
+               <div class="row my-3">
+                 <div class="col-md-2 d-flex justify-content-center">
+                   <img src="http://placehold.it/150x200" alt="">
+                 </div>
+                 <div class="col-md-10">
+                   <div class="d-flex justify-content-between">
+                     <h5>세월의 돌</h5>
+                     <div class="">
+                       <button class="btn btn-sm btn-outline-success" type="button" name="button">대출가능</button>
+                       <button class="btn btn-sm btn-outline-danger" type="button" name="button">대출중</button>
+                       <button class="btn btn-sm btn-outline-primary" type="button" name="button">예약가능</button>
+                     </div>
+                   </div>
+
+                   <hr>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>저자: 전민희</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행자: 제우미디어</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행년도: 2007</p>
+                     </div>
+                   </div>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>자료실: 문헌정보실</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>청구기호: 813.6-ㅈ278세-2</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <hr>
+               <div class="row my-3">
+                 <div class="col-md-2 d-flex justify-content-center">
+                   <img src="http://placehold.it/150x200" alt="">
+                 </div>
+                 <div class="col-md-10">
+                   <div class="d-flex justify-content-between">
+                     <h5>세월의 돌</h5>
+                     <div class="">
+                       <button class="btn btn-sm btn-outline-success" type="button" name="button">대출가능</button>
+                       <button class="btn btn-sm btn-outline-danger" type="button" name="button">대출중</button>
+                       <button class="btn btn-sm btn-outline-primary" type="button" name="button">예약가능</button>
+                     </div>
+                   </div>
+
+                   <hr>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>저자: 전민희</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행자: 제우미디어</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행년도: 2007</p>
+                     </div>
+                   </div>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>자료실: 문헌정보실</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>청구기호: 813.6-ㅈ278세-2</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <hr>
+               <div class="row my-3">
+                 <div class="col-md-2 d-flex justify-content-center">
+                   <img src="http://placehold.it/150x200" alt="">
+                 </div>
+                 <div class="col-md-10">
+                   <div class="d-flex justify-content-between">
+                     <h5>세월의 돌</h5>
+                     <div class="">
+                       <button class="btn btn-sm btn-outline-success" type="button" name="button">대출가능</button>
+                       <button class="btn btn-sm btn-outline-danger" type="button" name="button">대출중</button>
+                       <button class="btn btn-sm btn-outline-primary" type="button" name="button">예약가능</button>
+                     </div>
+                   </div>
+
+                   <hr>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>저자: 전민희</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행자: 제우미디어</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행년도: 2007</p>
+                     </div>
+                   </div>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>자료실: 문헌정보실</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>청구기호: 813.6-ㅈ278세-2</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <hr>
+               <div class="row my-3">
+                 <div class="col-md-2 d-flex justify-content-center">
+                   <img src="http://placehold.it/150x200" alt="">
+                 </div>
+                 <div class="col-md-10">
+                   <div class="d-flex justify-content-between">
+                     <h5>세월의 돌</h5>
+                     <div class="">
+                       <button class="btn btn-sm btn-outline-success" type="button" name="button">대출가능</button>
+                       <button class="btn btn-sm btn-outline-danger" type="button" name="button">대출중</button>
+                       <button class="btn btn-sm btn-outline-primary" type="button" name="button">예약가능</button>
+                     </div>
+                   </div>
+
+                   <hr>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>저자: 전민희</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행자: 제우미디어</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행년도: 2007</p>
+                     </div>
+                   </div>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>자료실: 문헌정보실</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>청구기호: 813.6-ㅈ278세-2</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <hr>
+               <div class="row my-3">
+                 <div class="col-md-2 d-flex justify-content-center">
+                   <img src="http://placehold.it/150x200" alt="">
+                 </div>
+                 <div class="col-md-10">
+                   <div class="d-flex justify-content-between">
+                     <h5>세월의 돌</h5>
+                     <div class="">
+                       <button class="btn btn-sm btn-outline-success" type="button" name="button">대출가능</button>
+                       <button class="btn btn-sm btn-outline-danger" type="button" name="button">대출중</button>
+                       <button class="btn btn-sm btn-outline-primary" type="button" name="button">예약가능</button>
+                     </div>
+                   </div>
+
+                   <hr>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>저자: 전민희</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행자: 제우미디어</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>발행년도: 2007</p>
+                     </div>
+                   </div>
+                   <div class="row text-muted">
+                     <div class="col-md-4">
+                       <p>자료실: 문헌정보실</p>
+                     </div>
+                     <div class="col-md-4">
+                       <p>청구기호: 813.6-ㅈ278세-2</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <hr>
+               <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+             </div>
+           </div>
+
+         </div>
+
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
