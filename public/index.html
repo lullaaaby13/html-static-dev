@@ -7,55 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/css/main.css">
     <title>Hello, world!</title>
-    <style media="screen">
-    html {
-      overflow: hidden;
-    }
-    body {
-      overflow: auto;
-    }
-    body::before {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('./img/bg.jpg');
-      background-size: cover;
-      -webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
-      filter: blur(2px);
-      transform: scale(1.02);
-      z-index: -1;
-      content: "";
-    }
-    .form-control {
-      border-radius: 0;
-      height: 60px;
-      border: none;
-      background-color: #e9ecef;
-      border-bottom: 1px solid;
-    }
-    .form-control > input {
-      color: red;
-    }
-    .jumbotron {
-      height: 900vh;
-      max-height: 90vh;
-    }
-    </style>
   </head>
   <body>
     <div class="container-fluid px-5">
       <div class="jumbotron my-4 mx-5 px-5">
-
-        <div class="input-group mb-4" style="">
-          <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
-        </div>
 
         <div class="float-right">
           <!-- <button type="button" class="btn btn-outline-success px-4">로그인</button> -->
@@ -88,14 +45,16 @@
                <a class="nav-link text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">자료검색</a>
                <div class="dropdown-menu">
                  <a class="dropdown-item" href="#">주제별 검색</a>
-                 <a class="dropdown-item" href="#">Another action</a>
-                 <a class="dropdown-item" href="#">Something else here</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="#">Separated link</a>
+                 <a class="dropdown-item" href="#">신착도서</a>
+                 <a class="dropdown-item" href="#">대출 베스트</a>
                </div>
              </li>
           </li>
         </ul>
+
+        <div class="input-group mb-4" style="">
+          <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
+        </div>
 
         <hr>
 

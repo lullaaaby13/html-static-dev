@@ -1,489 +1,180 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-    <style media="screen">
-    @import url('https://fonts.googleapis.com/css?family=Numans');
-    body {
-      overflow: auto;
-    }
-    html,body{
-    background-image: url('./img/bg2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
-    }
-    body::before {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('./img/bg2.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      -webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
-      filter: blur(2px);
-      transform: scale(1.02);
-      z-index: -1;
-      content: "";
-    }
-    .form-control {
-      border-radius: 0;
-      height: 60px;
-      border: none;
-      background-color: #e9ecef;
-      border-bottom: 1px solid;
-    }
-    .form-control > input {
-      color: red;
-    }
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Hello, world!</title>
+</head>
 
-/*******************************************************************************/
+<body class="overflow-auto">
+  <div class="container-fluid px-5">
+    <div class="jumbotron my-4 mx-5 px-5">
 
-/* BASIC */
-
-html {
-  background-color: #56baed;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-}
-
-a {
-  color: #92badd;
-  display:inline-block;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-h2 {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  display:inline-block;
-  margin: 40px 8px 10px 8px;
-  color: #cccccc;
-}
-
-
-
-/* STRUCTURE */
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-}
-
-#formContent {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 650px;
-  position: relative;
-  padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-}
-
-
-
-/* TABS */
-
-h2.inactive {
-  color: #cccccc;
-}
-
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
-}
-
-
-
-/* FORM TYPOGRAPHY*/
-
-input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
-  border: none;
-  color: white;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
-}
-
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  -moz-transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
-input[type=text] {
-  background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type=text]:placeholder {
-  color: #cccccc;
-}
-
-
-
-/* ANIMATIONS */
-
-/* Simple CSS3 Fade-in-down Animation */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-/* Simple CSS3 Fade-in Animation */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fadeIn {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
-
-.fadeIn.first {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.fadeIn.second {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.fadeIn.third {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadeIn.fourth {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-/* Simple CSS3 Fade-in Animation */
-.underlineHover {
-  display: block;
-}
-
-.underlineHover:after {
-  display: block;
-  left: 0;
-  bottom: -10px;
-  width: 0;
-  height: 2px;
-  background-color: #56baed;
-  content: "";
-  transition: width 0.2s;
-}
-
-.underlineHover:hover {
-  color: #0d0d0d;
-}
-
-.underlineHover:hover:after{
-  width: 100%;
-}
-
-
-
-/* OTHERS */
-
-*:focus {
-    outline: none;
-}
-
-#icon {
-  width:20%;
-}
-
-
-    </style>
-  </head>
-  <body class="overflow-auto">
-    <div class="container-fluid px-5">
-      <div class="jumbotron my-4 mx-5 px-5">
-
-        <!-- <div class="input-group mb-4" style="">
+      <!-- <div class="input-group mb-4" style="">
           <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
         </div> -->
 
-        <div class="float-right">
-          <!-- <button type="button" class="btn btn-outline-success px-4">로그인</button> -->
-          <div class="d-flex align-items-center">
-            <img src="http://placehold.it/40x40" class="rounded-circle mr-3" alt="Cinque Terre">
-            <p class="pt-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="text-success font-weight-bold h5">BlueCitron</span>
-              님 안녕하세요
-            </p>
+      <div class="float-right">
+        <!-- <button type="button" class="btn btn-outline-success px-4">로그인</button> -->
+        <div class="d-flex align-items-center">
+          <img src="http://placehold.it/40x40" class="rounded-circle mr-3" alt="Cinque Terre">
+          <p class="pt-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="text-success font-weight-bold h5">BlueCitron</span>
+            님 안녕하세요
+          </p>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">관심도서</a>
-              <a class="dropdown-item" href="#">대출중인도서</a>
-              <a class="dropdown-item" href="#">회원정보</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">카테고리관리</a>
-              <a class="dropdown-item" href="#">도서등록</a>
-              <a class="dropdown-item" href="#">도서대여현황</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">로그아웃</a>
-            </div>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">관심도서</a>
+            <a class="dropdown-item" href="#">대출중인도서</a>
+            <a class="dropdown-item" href="#">회원정보</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">카테고리관리</a>
+            <a class="dropdown-item" href="#">도서등록</a>
+            <a class="dropdown-item" href="#">도서대여현황</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">로그아웃</a>
           </div>
         </div>
-        <ul class="nav">
-          <li class="nav-item mr-4">
-            <h4>CITRON'S LIBRARY</h4>
-          </li>
-          <li class="nav-item">
-            <li class="nav-item dropdown">
-               <a class="nav-link text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">자료검색</a>
-               <div class="dropdown-menu">
-                 <a class="dropdown-item" href="#">주제별 검색</a>
-                 <a class="dropdown-item" href="#">Another action</a>
-                 <a class="dropdown-item" href="#">Something else here</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="#">Separated link</a>
-               </div>
-             </li>
-          </li>
-        </ul>
-
-        <!-- <hr> -->
-        <div class="input-group mb-4" style="">
-          <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
-        </div>
-        <hr>
-
-        <div class="clearfix my-5">
-          <div class="card w-25 mr-3 float-left">
-            <ul class="list-group">
-               <li class="list-group-item active">통합자료검색</li>
-               <li class="list-group-item">주제별검색</li>
-               <li class="list-group-item">대출베스트</li>
-             </ul>
+      </div>
+      <ul class="nav">
+        <li class="nav-item mr-4">
+          <h4>CITRON'S LIBRARY</h4>
+        </li>
+        <li class="nav-item">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-secondary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">자료검색</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">주제별 검색</a>
+            <a class="dropdown-item" href="#">신착도서</a>
+            <a class="dropdown-item" href="#">대출 베스트</a>
           </div>
-          <div class="card float-right" style="width: 73%">
-            <div class="card-body">
-              <h5 class="pl-4">처음 해보는 Servlet & JSP</h5>
-              <hr>
-              <div class="row">
-                <div class="d-flex justify-content-center col-md-3">
-                  <img src="http://placehold.it/200x250" alt="">
+        </li>
+        </li>
+      </ul>
+
+      <!-- <hr> -->
+      <div class="input-group mb-4" style="">
+        <input type="text" class="form-control" placeholder="오늘은 어떤 책을 읽고 싶으세요?">
+      </div>
+      <hr>
+
+      <div class="clearfix my-5">
+        <div class="card w-25 mr-3 float-left">
+          <ul class="list-group">
+            <li class="list-group-item active">통합자료검색</li>
+            <li class="list-group-item">주제별검색</li>
+            <li class="list-group-item">대출베스트</li>
+          </ul>
+        </div>
+        <div class="card float-right" style="width: 73%">
+          <div class="card-body">
+            <h5 class="pl-4">처음 해보는 Servlet & JSP</h5>
+            <hr>
+            <div class="row">
+              <div class="d-flex justify-content-center col-md-3">
+                <img src="http://placehold.it/200x250" alt="">
+              </div>
+              <div class="col-md-9 p-3">
+                <div class="row my-2">
+                  <div class="col-md-2 text-right">
+                    <span class="font-weight-bold h6">저자사항</span>
+                  </div>
+                  <div class="col-md-10">
+                    조우석;김현정 지음
+                  </div>
                 </div>
-                <div class="col-md-9 p-3">
-                  <div class="row my-2">
-                    <div class="col-md-2 text-right">
-                      <span class="font-weight-bold h6">저자사항</span>
-                    </div>
-                    <div class="col-md-10">
-                      조우석;김현정 지음
-                    </div>
+                <div class="row my-2">
+                  <div class="col-md-2 text-right">
+                    <span class="font-weight-bold h6">발행사항</span>
                   </div>
-                  <div class="row my-2">
-                    <div class="col-md-2 text-right">
-                      <span class="font-weight-bold h6">발행사항</span>
-                    </div>
-                    <div class="col-md-10">
-                      서울 : 한언, 2009
-                    </div>
+                  <div class="col-md-10">
+                    서울 : 한언, 2009
                   </div>
-                  <div class="row my-2">
-                    <div class="col-md-2 text-right">
-                      <span class="font-weight-bold h6">형태사항</span>
-                    </div>
-                    <div class="col-md-10">
-                      206 p. : 삽도 20 cm
-                    </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-md-2 text-right">
+                    <span class="font-weight-bold h6">형태사항</span>
                   </div>
-                  <div class="row my-2">
-                    <div class="col-md-2 text-right">
-                      <span class="font-weight-bold h6">표준번호</span>
-                    </div>
-                    <div class="col-md-10">
-                      ISBN: 9788955965032 43370: \11000
-                    </div>
+                  <div class="col-md-10">
+                    206 p. : 삽도 20 cm
                   </div>
-                  <div class="row my-2">
-                    <div class="col-md-2 text-right">
-                      <span class="font-weight-bold h6">분류기호</span>
-                    </div>
-                    <div class="col-md-10">
-                      한국십진분류법: 373.4
-                    </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-md-2 text-right">
+                    <span class="font-weight-bold h6">표준번호</span>
+                  </div>
+                  <div class="col-md-10">
+                    ISBN: 9788955965032 43370: \11000
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-md-2 text-right">
+                    <span class="font-weight-bold h6">분류기호</span>
+                  </div>
+                  <div class="col-md-10">
+                    한국십진분류법: 373.4
                   </div>
                 </div>
               </div>
+            </div>
 
-              <hr>
-              <h5 class="pl-4">상세정보</h5>
-              <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <hr>
+            <h5 class="pl-4">상세정보</h5>
+            <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-              <h5 class="pl-4">소장정보</h5>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">대출상태</th>
-                    <th scope="col">청구기호</th>
-                    <th scope="col">등록번호</th>
-                    <th scope="col">반납예정일</th>
-                    <th scope="col">자료실</th>
-                    <th scope="col">도서예약</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <input type="checkbox" aria-label="Checkbox for following text input">
-                    </th>
-                    <td>대출가능[비치중]</td>
-                    <td>373.4-ㅈ662ㄲ</td>
-                    <td>BEM000187352</td>
-                    <td>-</td>
-                    <td>[분당]문헌정보실</td>
-                    <td>
-                      <!-- <button class="btn btn-sm btn-outline-success" type="button" name="button">예약가능</button> -->
-                      <button class="btn btn-sm btn-outline-danger" type="button" name="button">예약불가</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="d-flex justify-content-center p-3">
-                <button class="btn btn-primary m-3" type="button" name="button">관심도서에 추가</button>
-                <button class="btn btn-secondary m-3" type="button" name="button">관심도서 보러가기</button>
-              </div>
+            <h5 class="pl-4">소장정보</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">대출상태</th>
+                  <th scope="col">청구기호</th>
+                  <th scope="col">등록번호</th>
+                  <th scope="col">반납예정일</th>
+                  <th scope="col">자료실</th>
+                  <th scope="col">도서예약</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </th>
+                  <td>대출가능[비치중]</td>
+                  <td>373.4-ㅈ662ㄲ</td>
+                  <td>BEM000187352</td>
+                  <td>-</td>
+                  <td>[분당]문헌정보실</td>
+                  <td>
+                    <!-- <button class="btn btn-sm btn-outline-success" type="button" name="button">예약가능</button> -->
+                    <button class="btn btn-sm btn-outline-danger" type="button" name="button">예약불가</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-center p-3">
+              <button class="btn btn-primary m-3" type="button" name="button">관심도서에 추가</button>
+              <button class="btn btn-secondary m-3" type="button" name="button">관심도서 보러가기</button>
             </div>
           </div>
-
         </div>
 
       </div>
+
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
 </html>
